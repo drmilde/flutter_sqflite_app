@@ -37,7 +37,14 @@ class CityListScreen extends StatelessWidget {
                       height: 100,
                       width: 200,
                       color: Colors.blue,
-                      child: Text(result[index]["name"]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("${result[index]["id"]}"),
+                          Text(result[index]["name"]),
+                          Text(result[index]["plz"]),
+                        ],
+                      ),
                     )),
                   );
                 });
